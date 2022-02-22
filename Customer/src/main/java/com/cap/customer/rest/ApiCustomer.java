@@ -38,7 +38,7 @@ public class ApiCustomer {
 	{
 		Optional<Client> co = crepo.findById(id);
 		if(co.isPresent())
-			return new ResponseEntity<>(co.get(), HttpStatus.FOUND);
+			return new ResponseEntity<>(co.get(), HttpStatus.OK);
 		else
 			return new ResponseEntity<Client>(HttpStatus.NO_CONTENT);
 	}
