@@ -7,4 +7,5 @@ import com.cap.customer.entities.Compte;
 public interface ICompte extends JpaRepository<Compte, Long> {
 
 	Compte findByUsernameAndPassword(String log,String pass);
+	public Compte findByUsername(String log);
 }
